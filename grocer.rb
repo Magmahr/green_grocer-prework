@@ -1,3 +1,5 @@
+require 'pry'
+
 def consolidate_cart(cart)
   consolidated = {}
   cart.each do |thing|
@@ -19,9 +21,11 @@ def apply_coupons(cart, coupons)
   cart.each do |item, detail|
     if applied[item] == nil
       applied[item] = detail
-    if item == "AVOCADO"
+    elsif item == "AVOCADO"
       applied[item][:count] = 1
-      
+    end 
+    binding.pry
+  end  
 end
 
 def apply_clearance(cart)
