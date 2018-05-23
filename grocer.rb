@@ -17,10 +17,10 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  applied = {}
+  applicable = {}
   cart.each do |item, detail|
     item = [:item]
-    if applied[item] == nil
+    if applicable[item] == nil
       applied[item] = detail
     elsif item == "AVOCADO"
       applied[item][:count] = 1
