@@ -20,7 +20,7 @@ def apply_coupons(cart, coupons)
   applied = {}
   cart.each do |item, detail|
     item = [:item]
-    if cart[item] == nil
+    if applied[item] == nil
       applied[item] = detail
     elsif item == "AVOCADO"
       applied[item][:count] = 1
