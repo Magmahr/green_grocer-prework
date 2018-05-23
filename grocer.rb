@@ -24,7 +24,6 @@ def apply_coupons(cart, coupons)
     elsif item == "AVOCADO"
       applied[item][:count] = 1
     end 
-    binding.pry
   end  
 end
 
