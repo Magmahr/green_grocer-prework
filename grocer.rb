@@ -22,7 +22,7 @@ def apply_coupons(cart, coupons)
     item = coupons[:item]
     if applicable[item].nil?
       applicable[item] = 1
-    elsif applicable[item] == item
+    else applicable[item] == item
       applicable[item] += 1
     end 
 
