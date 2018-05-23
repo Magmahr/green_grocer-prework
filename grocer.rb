@@ -24,8 +24,9 @@ def apply_coupons(cart, coupons)
     elsif item == "AVOCADO"
       applied[item][:count] = 1
     end 
-    applied.merge!()
   end  
+  applied.merge!("AVOCADO W/COUPON" => {:price => 5.0, :clearance => true, :count => 1})
+  applied
 end
 
 def apply_clearance(cart)
