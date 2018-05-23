@@ -21,9 +21,9 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon|
     item = coupons[:item]
     if applicable[item].nil?
-      applied[item] = 1
+      applicable[item] = 1
     elsif applicable[item] == item
-      applied[item] += 1
+      applicable[item] += 1
     end 
 
       if cart.keys.include?(item)
