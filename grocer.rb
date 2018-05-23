@@ -26,7 +26,7 @@ def apply_coupons(cart, coupons)
       applied[item] += 1
     end 
 
-  cart.each do |item, detail|
+  if cart.keys.include?(item) do |item, detail|
     if cart[item][:count] >= coupon[:num]
       cart[item]
 end
