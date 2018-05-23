@@ -21,9 +21,9 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon|
     item = coupons[:item]
     if applicable[item] == nil
-      applied[item][:count] = 1
+      applied[item] = 1
     elsif applicable[item] == item
-      applied[item][:count] += 1
+      applied[item] += 1
     end 
   end  
   applied
