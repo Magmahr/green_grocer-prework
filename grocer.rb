@@ -18,12 +18,12 @@ end
 
 def apply_coupons(cart, coupons)
   applicable = {}
-  coupons.each do |item, coupon|
+  coupons.each do |coupon|
     item = coupons[:item]
     if applicable[item] == nil
-      applied[item] = detail
-    elsif item == "AVOCADO"
       applied[item][:count] = 1
+    elsif applicable[item] == item
+      applied[item][:count] += 1
     end 
   end  
   applied
