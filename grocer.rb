@@ -19,7 +19,7 @@ end
 def apply_coupons(cart, coupons)
   applicable = {}
   cart.each do |item, detail|
-    item = [:item]
+    item = coupons[:item]
     if applicable[item] == nil
       applied[item] = detail
     elsif item == "AVOCADO"
