@@ -25,7 +25,6 @@ def apply_coupons(cart, coupons)
       applied[item][:count] = 1
     end 
   end  
-  applied.merge!("AVOCADO W/COUPON" => {:price => 5.0, :clearance => true, :count => 1})
   applied
 end
 
