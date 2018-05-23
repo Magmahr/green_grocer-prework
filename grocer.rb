@@ -25,10 +25,9 @@ def apply_coupons(cart, coupons)
     elsif applicable[item] == item
       applied[item] += 1
     end 
-  end  
 
   cart.each do |item, detail|
-    if cart[item][:count] >= applied
+    if cart[item][:count] >= coupon[:count]
 end
 
 def apply_clearance(cart)
