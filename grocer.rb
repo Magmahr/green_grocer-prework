@@ -26,10 +26,15 @@ def apply_coupons(cart, coupons)
       applied[item] += 1
     end 
 
-  if cart.keys.include?(item)
-    if cart[item][:count] >= coupon[:num]
-      cart[item][:count] -= coupon[:num]
-      cart["#{item} W/COUPON"] = {:price} => coupon[:cost], :clearance => cart[:clearance], :count => applicable[item]
+      if cart.keys.include?(item)
+        if cart[item][:count] >= coupon[:num]
+         cart[item][:count] -= coupon[:num]
+           cart["#{item} W/COUPON"] = {:price} => coupon[:cost],   :clearance => cart[:clearance], :count => applicable[item]
+  end    
+    end
+      end
+        end
+    cart    
 end
 
 def apply_clearance(cart)
