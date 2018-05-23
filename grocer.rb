@@ -1,9 +1,27 @@
 def consolidate_cart(cart)
-  # code here
+  consolidated = {}
+  cart.each do |thing|
+    thing.each do |item, detail|
+      if consolidated[item] == nil
+        consolidated[item] = detail
+        consolidated[item].merge!(:count => 1)
+      else  
+         consolidated[item][:count] += 1
+          
+      end
+    end 
+  end 
+  consolidated
 end
 
 def apply_coupons(cart, coupons)
-  # code here
+  applied = {}
+  cart.each do |item, detail|
+    if applied[item] == nil
+      applied[item] = detail
+    if item == "AVOCADO"
+      applied[item][:count] = 1
+      
 end
 
 def apply_clearance(cart)
