@@ -19,7 +19,7 @@ end
 def apply_coupons(cart, coupons)
   applicable = {}
   coupons.each do |coupon|
-    item = coupons[:item]
+    item = coupon[:item]
     if applicable[item].nil?
       applicable[item] = 1
     else 
