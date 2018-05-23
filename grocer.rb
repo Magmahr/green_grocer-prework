@@ -26,9 +26,9 @@ def apply_coupons(cart, coupons)
       applied[item] += 1
     end 
 
-  if cart.keys.include?(item) do |item, detail|
+  if cart.keys.include?(item)
     if cart[item][:count] >= coupon[:num]
-      cart[item]
+      cart[item][:count] -= 
 end
 
 def apply_clearance(cart)
